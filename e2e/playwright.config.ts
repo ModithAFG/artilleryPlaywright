@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: 'e2e/tests',
   reporter: 'html',
   use: {
-    baseURL: 'https://playwright.dev/'
+    baseURL: 'https://playwright.dev/' //playwright documentation URL
   },
   projects: [
     {
