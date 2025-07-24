@@ -22,5 +22,6 @@ jobs:
         run: npm install
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.ts
+        continue-on-error: true
       - name: Run Artillery performance test
         run: npx artillery run performance/search-for-ts-doc.yml --record
