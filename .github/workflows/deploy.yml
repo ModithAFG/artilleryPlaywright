@@ -1,0 +1,26 @@
+name: Deploy and Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      ARTILLERY_CLOUD_API_KEY: ${{ secrets.ARTILLERY_CLOUD_API_KEY }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Run Playwright tests
+        run: npx playwright test --config=playwright.config.ts --headed
+      - name: Run Artillery performance test
+        run: npx artillery run performance/search-for-ts-doc.yml --record
