@@ -14,14 +14,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+      
       - name: Install dependencies
         run: npm install
+      
       - name: Run Playwright tests
-        run: npx playwright test --config=playwright.config.ts
+        run: npm run playwright
         continue-on-error: true
+      
       - name: Run Artillery performance test
-        run: npx artillery run performance/search-for-ts-doc.yml --record
+        run: npm run artillery
