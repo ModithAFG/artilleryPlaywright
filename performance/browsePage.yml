@@ -1,5 +1,5 @@
 config:
-  target: "https://playwright.dev/"
+  target: "https://testing.v3.sit.ambitionone.com.au/login"
   phases:
     - duration: 1
       arrivalRate: 1
@@ -9,5 +9,9 @@ config:
     playwright: {}
 
 scenarios:
-  - engine: playwright
-    testFunction: "playwrightTest"
+  # - name: "Playwright Test for Playwright Dev"
+  #   engine: playwright
+  #   testFunction: "playwrightTest"
+  - name: "Fintell Test"
+    engine: playwright
+    testFunction: "fintellTest"

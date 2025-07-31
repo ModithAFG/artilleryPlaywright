@@ -9,3 +9,4 @@ export async function goToAssertions(page: Page) {
     await page.getByRole('link', { name: 'await expect(locator).toBeAttached()' }).click();
     await page.getByRole('link', { name: 'BrowserContext' }).click();
 }
+
