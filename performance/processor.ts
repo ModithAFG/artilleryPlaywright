@@ -1,5 +1,5 @@
 import { goToAssertions } from '../e2e/helpers/browsePage';
-import { ensureLoggedIn, testContactsPage, testDashboard, testHomePage, testopportunities } from '../e2e/helpers/loginPage';
+import { ensureLoggedIn, testContactsPage,  testHomePage, testopportunities } from '../e2e/helpers/loginPage';
 import path from 'path';
 import fs from 'fs';
 
