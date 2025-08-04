@@ -4,15 +4,17 @@ export default defineConfig({
   testDir: 'e2e/tests',
   //reporter: 'html',
   reporter: [
-    ['@artilleryio/playwright-reporter', { name: 'My Test Suite' }],
+   // ['@artilleryio/playwright-reporter', { name: 'My Test Suite' }],
   ],
   use: {
-    baseURL: 'https://playwright.dev/'
+    baseURL: 'https://playwright.dev/',
+    storageState: 'storageState.json',
   },
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] }
     }
-  ]
+  ],
+  globalSetup: require.resolve('./global-setup.ts'),
 });

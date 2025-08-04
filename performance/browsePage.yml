@@ -1,12 +1,19 @@
 config:
-  target: "https://testing.v3.sit.ambitionone.com.au/login"
+  target: "https://testing.v3.sit.ambitionone.com.au/"
   phases:
     - duration: 1
       arrivalRate: 1
       name: "Phase 1"
   processor: "./processor.ts"
   engines:
-    playwright: {}
+    playwright:
+      showAllPageMetrics: true
+      contextOptions:
+        storageState: "storageState.json"
+
+before:
+  engine: playwright
+  testFunction: loginUserAndSaveStorage
 
 scenarios:
   # - name: "Playwright Test for Playwright Dev"
