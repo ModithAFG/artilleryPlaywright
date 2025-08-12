@@ -1,6 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { getTOTP } from './totp';
-import { collectWebVitals } from './webVitals';
+ //import { collectWebVitals } from './webVitals';
 
 
 // export async function testDashboard(page: Page) {
@@ -27,38 +27,37 @@ export async function testHomePage(page: Page) {
     await page.goto('https://testing.v3.sit.ambitionone.com.au')
     await page.waitForSelector('#page-menu-trigger', { timeout: 40000 });
     await page.waitForLoadState('domcontentloaded'); // or 'load'
-    await collectWebVitals(page);
+    // await collectWebVitals(page);
+    
+    await page.locator('#page-menu-trigger').click();
+    await page.getByRole('link', { name: 'Opportunities' }).click();
+    await expect(page.locator('#menu-wrapper-page')).toContainText('Opportunities');
+    await page.waitForLoadState('domcontentloaded'); // or 'load'
     await page.locator('#page-menu-trigger').click();
     await page.getByRole('link', { name: 'Contacts' }).click();
     
     await expect(page.locator('#menu-wrapper-page')).toContainText('Contacts');
-    console.log('Current URL before Contacts assertion:', await page.url());
-    //   await page.waitForLoadState('networkidle');
-    await page.locator('#page-menu-trigger').click();
-    console.log('Current URL before Contacts assertion:', await page.url());
-    await page.getByRole('link', { name: 'Opportunities' }).click();
-    console.log('Current URL before Contacts assertion:', await page.url());
-    await expect(page.locator('#menu-wrapper-page')).toContainText('Opportunities');
-
-    console.log('Current URL before Contacts assertion:', await page.url());
-    await page.locator('#tab-selector').getByRole('link', { name: 'Contacts' }).click();
-    console.log('Current URL before Contacts assertion:', await page.url());
-    await expect(page.locator('#menu-wrapper-page')).toContainText('Contacts');
-
-    await page.locator('#tab-selector').getByRole('link', { name: 'Opportunities' }).click();
-    console.log('Current URL before Contacts assertion:', await page.url());
-    await page.locator('#page-menu-trigger').click();
-
+    
+    
+    await page.waitForLoadState('domcontentloaded'); // or 'load'
 }
 
 export async function testContactsPage(page: Page) {
     await page.goto('https://testing.v3.sit.ambitionone.com.au/contacts');
     await expect(page.locator('#menu-wrapper-page')).toContainText('Contacts');
-    await collectWebVitals(page);
+     await page.locator('#page-menu-trigger').click();
+    await page.getByRole('link', { name: 'Opportunities' }).click();
+    await expect(page.locator('#menu-wrapper-page')).toContainText('Opportunities');
+    // await collectWebVitals(page);
 } export async function testopportunities(page: Page) {
     await page.goto('https://testing.v3.sit.ambitionone.com.au/opportunities');
     await expect(page.locator('#menu-wrapper-page')).toContainText('Opportunities');
-    await collectWebVitals(page);
+   
+     await page.locator('#page-menu-trigger').click();
+    await page.getByRole('link', { name: 'Contacts' }).click();
+    
+    await expect(page.locator('#menu-wrapper-page')).toContainText('Contacts');
+    // await collectWebVitals(page);
 }
 
 export async function ensureLoggedIn(page: Page) {
