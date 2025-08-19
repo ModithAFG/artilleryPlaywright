@@ -1,0 +1,89 @@
+[
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/",
+    "name": "TTFB",
+    "value": 296.59999999962747,
+    "rating": "good",
+    "timestamp": 1755234048331,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/dashboard",
+    "name": "FCP",
+    "value": 3160,
+    "rating": "poor",
+    "timestamp": 1755234051415,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/dashboard",
+    "name": "LCP",
+    "value": 3160,
+    "rating": "needs-improvement",
+    "timestamp": 1755234051687,
+    "element": {
+      "tag": "H1",
+      "id": "",
+      "classes": "text-[10vw] leading-[5vw] md:text-[100px] lg:text-[150px] lg:leading-[70px] xl:text-[200px] xl:leading-[80px] 4xl:text-[200px] 4xl:leading-[200px] font-extralight text-slate-50 opacity-75",
+      "textContent": "Dashboard"
+    }
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/contacts",
+    "name": "TTFB",
+    "value": 381.09999999962747,
+    "rating": "good",
+    "timestamp": 1755234061248,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/contacts",
+    "name": "FCP",
+    "value": 1876,
+    "rating": "needs-improvement",
+    "timestamp": 1755234061645,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/contacts",
+    "name": "LCP",
+    "value": 1876,
+    "rating": "good",
+    "timestamp": 1755234061678,
+    "element": {
+      "tag": "H1",
+      "id": "",
+      "classes": "selection:bg-transparent selection:text-inherit text-[10vw] leading-[5vw] md:text-[100px] lg:text-[150px] lg:leading-[50px] xl:text-[200px] xl:leading-[80px] 2xl:text-[250px] 2xl:leading-[100px] font-extralight text-slate-50 opacity-75",
+      "textContent": "Contacts"
+    }
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/opportunities",
+    "name": "TTFB",
+    "value": 256.2999999988824,
+    "rating": "good",
+    "timestamp": 1755234065315,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/opportunities",
+    "name": "FCP",
+    "value": 1756,
+    "rating": "good",
+    "timestamp": 1755234065784,
+    "element": null
+  },
+  {
+    "url": "https://testing.v3.sit.ambitionone.com.au/opportunities",
+    "name": "LCP",
+    "value": 1756,
+    "rating": "good",
+    "timestamp": 1755234065830,
+    "element": {
+      "tag": "H1",
+      "id": "",
+      "classes": "text-[10vw] leading-[5vw] md:text-[100px] lg:text-[150px] lg:leading-[70px] xl:text-[200px] xl:leading-[80px] 4xl:text-[200px] 4xl:leading-[200px] font-extralight text-slate-50 opacity-75",
+      "textContent": "Opportunities"
+    }
+  }
+]
